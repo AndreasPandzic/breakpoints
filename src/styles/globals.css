@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: FunkisQHeadlineLight;
+  src: url("/font/FunkisQHeadline-Light.woff") format("woff"),
+    url("/font/FunkisQHeadline-Light.woff2") format("woff2"),
+    url("/font/FunkisQHeadline-Light.otf") format("otf");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: FunkisQHeadlineRegular;
+  src: url("/font/FunkisQHeadline-Regular.woff") format("woff"),
+    url("/font/FunkisQHeadline-Regular.woff2") format("woff2"),
+    url("/font/FunkisQHeadline-Regular.otf") format("otf");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: FunkisQHeadlineMedium;
+  src: url("/font/FunkisQHeadline-Medium.woff") format("woff"),
+    url("/font/FunkisQHeadline-Medium.woff2") format("woff2"),
+    url("/font/FunkisQHeadline-Medium.otf") format("otf");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: FunkisQHeadlineBold;
+  src: url("/font/FunkisQHeadline-Bold.woff") format("woff"),
+    url("/font/FunkisQHeadline-Bold.woff2") format("woff2"),
+    url("/font/FunkisQHeadline-Bold.otf") format("otf");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: FunkisQHeadlineSemiBold;
+  src: url("/font/FunkisQHeadline-SemiBold.woff") format("woff"),
+    url("/font/FunkisQHeadline-SemiBold.woff2") format("woff2"),
+    url("/font/FunkisQHeadline-SemiBold.otf") format("otf");
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer components {
+  .container-outer {
+    @apply w-screen;
+  }
+
+  .container-inner {
+    @apply max-w-[1536px] xl:max-w-[1920px] mx-auto;
+  }
+
+  .elevation-light {
+    box-shadow: 0px 1px 2px rgba(29, 29, 29, 0.05), 0px 3px 6px rgba(29, 29, 29, 0.1);
+    border-radius: 8px;
+  }
+  .elevation-medium {
+    box-shadow: 0px 1px 2px rgba(29, 29, 29, 0.05), 0px 6px 12px rgba(29, 29, 29, 0.1);
+    border-radius: 8px;
+  }
+  .elevation-strong {
+    box-shadow: 0px 2px 4px rgba(29, 29, 29, 0.05), 0px 8px 32px rgba(29, 29, 29, 0.2);
+    border-radius: 8px;
+  }
+  /* Typography */
+  .h1 {
+    font-family: FunkisQHeadlineSemiBold, system-ui, sans-serif;
+    @apply font-semibold text-[3rem] lg:text-[5rem];
+    line-height: 110%;
+    letter-spacing: -1%;
+  }
+  .h2 {
+    font-family: FunkisQHeadlineSemiBold, system-ui, sans-serif;
+    @apply font-semibold text-[2rem] lg:text-[4.5rem];
+    line-height: 110%;
+    letter-spacing: -1%;
+  }
+  .h3 {
+    font-family: FunkisQHeadlineSemiBold, system-ui, sans-serif;
+    @apply font-semibold text-[2.5rem] lg:text-[3.5rem];
+    line-height: 110%;
+    letter-spacing: -1%;
+  }
+  .h3-mobil {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: -0.01em;
+  }
+  .h4 {
+    font-family: FunkisQHeadlineSemiBold, system-ui, sans-serif;
+    @apply font-semibold text-[1.25rem] lg:text-[2rem];
+    font-size: 2rem;
+    line-height: 110%;
+    letter-spacing: -1%;
+  }
+  .h5 {
+    font-family: FunkisQHeadlineSemiBold, system-ui, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 110%;
+    /* or 26px */
+    letter-spacing: -0.01em;
+  }
+  p {
+    font-family: FunkisQHeadlineRegular, system-ui, sans-serif;
+    @apply text-base;
+    font-weight: 400;
+  }
+  .overline {
+    font-family: FunkisQHeadlineRegular, system-ui, sans-serif;
+    @apply font-medium text-sm;
+    line-height: 150%;
+    letter-spacing: 5%;
+  }
+  .body1 {
+    font-family: FunkisQHeadlineRegular, system-ui, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+  }
+  .body1-bold {
+    font-family: FunkisQHeadlineSemiBold, system-ui, sans-serif;
+    @apply font-medium text-base;
+    line-height: 150%;
+  }
+  .body2 {
+    font-family: FunkisQHeadlineRegular, system-ui, sans-serif;
+    @apply font-normal text-sm;
+    line-height: 150%;
+  }
+  .body2-bold {
+    font-family: FunkisQHeadlineSemiBold, system-ui, sans-serif;
+    @apply font-medium text-sm;
+    line-height: 150%;
+  }
+  .body3 {
+    font-family: FunkisQHeadlineRegular, system-ui, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+  }
+  .body3-bold {
+    font-family: FunkisQHeadlineSemiBold, system-ui, sans-serif;
+    @apply font-medium text-xs;
+    line-height: 150%;
+  }
+  .btn-large {
+    font-family: FunkisQHeadlineRegular, system-ui, sans-serif;
+    @apply inline-block bg-btn-bg hover:bg-btn-hover text-btn-text text-base py-4 px-7;
+    font-size: 1.1rem;
+    border-radius: 30px;
+  }
+  .btn-small {
+    font-family: FunkisQHeadlineRegular, system-ui, sans-serif;
+    @apply inline-block bg-btn-bg hover:bg-btn-hover text-btn-text font-normal text-base py-4 px-7;
+    border-radius: 30px;
+  }
+}
