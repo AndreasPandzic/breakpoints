@@ -89,7 +89,7 @@ const SinglePostWithItems = () => {
             const justify = index % 2 === 0 ? "lg:justify-end" : "lg:justify-start";
             return (
               <div key={index} className={`w-full mb-10 lg:mb-25 lg:flex ${reverse} lg:gap-[72px]`}>
-                <div className={`w-full flex justify-center ${justify} mb-8 lg:mb-0 lg:w-1/2`}>
+                <div className={`w-full flex items-center justify-center ${justify} mb-8 lg:mb-0 lg:w-1/2`}>
                   <div className="lg:p-[10px]">
                     <Image
                       src={article.image.url}
@@ -103,7 +103,7 @@ const SinglePostWithItems = () => {
                   className={`w-full flex flex-col ${justify} lg:justify-center items-center gap-8 lg:w-1/2`}
                 >
                   {article.items.map((item, index) => (
-                    <div key={index} className="max-w-[668px]">
+                    <div key={index} className="max-w-[600px] lg:max-w-[668px]">
                       <div className="mb-3">
                         <Icons name={item.icon} />
                       </div>
