@@ -108,7 +108,7 @@ const SinglePostWithItems = () => {
                         <Icons name={item.icon} />
                       </div>
                       <div className="">
-                        <h3 className="mb-1 h3 lg:h5">{item.title}</h3>
+                        <h3 className="mb-1 h3-mobil lg:h5">{item.title}</h3>
                         <WysiwygWrapper className="body3 lg:body1" content={item.description} />
                       </div>
                     </div>
